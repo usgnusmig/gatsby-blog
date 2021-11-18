@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 
-const Index = ({ data, location }) => {
+const Render = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
@@ -85,7 +85,7 @@ const Index = ({ data, location }) => {
   )
 }
 
-export default Index
+export default Render
 
 export const pageQuery = graphql`
   query {
