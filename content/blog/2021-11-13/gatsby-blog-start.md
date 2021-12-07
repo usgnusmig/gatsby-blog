@@ -13,7 +13,7 @@ categories: TIL
 
 jekyll과 Gatsby 중 어떤 것으로 블로그를 만들건지 고민중에
 
-React에 대해 공부하면서 내 블로그도 만들 수 있는 Gatsby 를 사용하기로 했다f
+React에 대해 공부하면서 내 블로그도 만들 수 있는 Gatsby 를 사용하기로 했다
 
 나는 당연히 구글링만 하면 모든걸 직접 만들어낼 수 있을거라 생각했고 Gatsby Default Starter 테마로 시작을 했다
 
