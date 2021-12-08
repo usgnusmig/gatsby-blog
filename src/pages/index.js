@@ -4,7 +4,6 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -44,18 +43,17 @@ const Index = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
-                  <br />
-                  <small>{post.frontmatter.categories}</small>
-                </header>
-                <section>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
                     }}
                     itemProp="description"
                   />
-                </section>
+                  <small>{post.frontmatter.date}</small>
+                  <br />
+                  <small>{post.frontmatter.categories}</small>
+                </header>
+                {/* <section></section> */}
               </article>
             </li>
           )
@@ -87,10 +85,10 @@ export const pageQuery = graphql`
           categories
         }
       }
-         group(field: frontmatter___categories) {
-      edges {
-        node {
-          id
+      group(field: frontmatter___categories) {
+        edges {
+          node {
+            id
           }
         }
         fieldValue

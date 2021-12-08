@@ -6,13 +6,11 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-
 const Render = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
   const { group } = data.allMarkdownRemark
-
 
   if (posts.length === 0) {
     return (
@@ -34,18 +32,10 @@ const Render = ({ data, location }) => {
       <Bio />
       <Categories>
         {group.map(prop => {
-          
           const { fieldValue } = prop
 
-          return (
-            <li
-            key={fieldValue}
-            >
-              {fieldValue}
-            </li>
-            )
-          }
-        )}
+          return <li key={fieldValue}>{fieldValue}</li>
+        })}
       </Categories>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
@@ -107,10 +97,10 @@ export const pageQuery = graphql`
           categories
         }
       }
-         group(field: frontmatter___categories) {
-      edges {
-        node {
-          id
+      group(field: frontmatter___categories) {
+        edges {
+          node {
+            id
           }
         }
         fieldValue
