@@ -5,6 +5,7 @@ const About = () => {
   return (
     <>
       <h1>Hello Im Sungsu</h1>
+      <Link to="/">Go back</Link>
       <h4>Study..</h4>
       <Link to="/Counter">Counter</Link>
       <br />

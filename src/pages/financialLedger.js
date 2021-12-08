@@ -1,33 +1,42 @@
 import React, { useState } from "react"
-
+import { Link } from "gatsby"
+import Expense from "../components/financial/Expense"
+import AddExpense from "../components/financial/AddExpense/AddExpense"
 import styled from "styled-components"
 
-import Expenses from "../components/financial/Expenses/Expense"
-import NewExpense from "../components/financial/NewExpense/NewExpense"
+const TitleStyle = styled.h2`
+  text-align: center;
+  color: #003193;
+`
 
 const DUMMY_EXPENSES = [
   {
     id: "e1",
-    title: "Toilet Paper",
-    amount: 94.12,
-    date: new Date(2020, 7, 14),
+    title: "화장지",
+    amount: 130000,
+    date: new Date(2021, 7, 14),
   },
-  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+  {
+    id: "e2",
+    title: "맥북",
+    amount: 1500000,
+    date: new Date(2021, 2, 12),
+  },
   {
     id: "e3",
-    title: "Car Insurance",
-    amount: 294.67,
+    title: "주유소",
+    amount: 500000,
     date: new Date(2021, 2, 28),
   },
   {
     id: "e4",
-    title: "New Desk (Wooden)",
-    amount: 450,
+    title: "화분",
+    amount: 230000,
     date: new Date(2021, 5, 12),
   },
 ]
 
-const FinancialLedger = () => {
+const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES)
 
   const addExpenseHandler = expense => {
@@ -35,14 +44,14 @@ const FinancialLedger = () => {
       return [expense, ...prevExpenses]
     })
   }
-
   return (
     <div>
-      <h2>Let's get started!</h2>
-      <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={expenses} />
+      <Link to="/about">뒤로가기</Link>
+      <TitleStyle>가계부</TitleStyle>
+      <AddExpense onAddExpense={addExpenseHandler} />
+      <Expense items={expenses} />
     </div>
   )
 }
 
-export default FinancialLedger
+export default App

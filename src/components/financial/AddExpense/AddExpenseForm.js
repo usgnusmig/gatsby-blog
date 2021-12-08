@@ -1,16 +1,53 @@
 import React, { useState } from "react";
-import "./ExpenseForm.css";
+import styled from "styled-components";
+
+const AddExpenseControls = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+`;
+
+const AddExpenseLabel = styled.label`
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+`;
+
+const AddExpenseInput = styled.input`
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+`;
+
+const AddExpenseActions = styled.div`
+  text-align: right;
+`;
+
+const AddExpenseButton = styled.button`
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #0027b5;
+  background-color: #0027b5;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+  :hover,
+  :active {
+    background-color: #1242ba;
+    border-color: #1242ba;
+  }
+`;
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
-
-  // const [userInput, setUserInput] = useState({
-  //   enteredTitle: "",
-  //   enteredAmount: "",
-  //   enteredDate: "",
-  // });
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -41,18 +78,18 @@ const ExpenseForm = (props) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div className="new-expense__controls">
+      <AddExpenseControls>
         <div className="new-expense__control">
-          <label>Title</label>
-          <input
+          <AddExpenseLabel>이름</AddExpenseLabel>
+          <AddExpenseInput
             type="text"
             value={enteredTitle}
             onChange={titleChangeHandler}
           />
         </div>
         <div className="new-expense__control">
-          <label>Amount</label>
-          <input
+          <AddExpenseLabel>가격</AddExpenseLabel>
+          <AddExpenseInput
             type="number"
             min="0.01"
             step="0.01"
@@ -61,8 +98,8 @@ const ExpenseForm = (props) => {
           />
         </div>
         <div className="new-expense__control">
-          <label>Date</label>
-          <input
+          <AddExpenseLabel>날짜</AddExpenseLabel>
+          <AddExpenseInput
             type="date"
             min="2019-01-01"
             max="2022-12-31"
@@ -70,13 +107,13 @@ const ExpenseForm = (props) => {
             onChange={dateChangeHandler}
           />
         </div>
-      </div>
-      <div className="new-expense__actions">
-        <button type="button" onClick={props.onCansle}>
-          Cansle
-        </button>
-        <button type="submit">Add Expense</button>
-      </div>
+      </AddExpenseControls>
+      <AddExpenseActions>
+        <AddExpenseButton type="button" onClick={props.onCansle}>
+          취소
+        </AddExpenseButton>
+        <AddExpenseButton type="submit">항목 추가</AddExpenseButton>
+      </AddExpenseActions>
     </form>
   );
 };
