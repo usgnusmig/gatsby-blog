@@ -15,7 +15,7 @@ categories: Gatsby
 | 다크모드 만들기              |     X     |
 | 검색엔진 최적화              |     X     |
 | About 페이지 만들기          |     X     |
-| Header 바꾸기                |     X     |
-| Footer 바꾸기                |     X     |
+| Header 바꾸기                |     O     |
+| Footer 바꾸기                |     O     |
 | 이전글 다음글 기능 꾸미기    |     X     |
-| Post 바꾸기                  |     X     |
+| Post 바꾸기                  |     O     |

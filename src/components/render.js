@@ -1,10 +1,8 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-
-import Categories from "../components/categories"
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from "./bio"
+import Layout from "./layout"
+import Seo from "./seo"
 
 const Render = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -17,11 +15,7 @@ const Render = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <Seo title="All posts" />
         <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
+        <p>No blog posts found.</p>
       </Layout>
     )
   }
@@ -29,15 +23,7 @@ const Render = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <Bio />
-      <Categories>
-        {group.map(prop => {
-          const { fieldValue } = prop
-
-          return <li key={fieldValue}>{fieldValue}</li>
-        })}
-      </Categories>
-      <ol style={{ listStyle: `none` }}>
+      <ol>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
@@ -54,18 +40,17 @@ const Render = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
-                  <br />
-                  <small>{post.frontmatter.categories}</small>
-                </header>
-                <section>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
                     }}
                     itemProp="description"
                   />
-                </section>
+                  <small>{post.frontmatter.date}</small>
+                  <br />
+                  <small>{post.frontmatter.categories}</small>
+                </header>
+                {/* <section></section> */}
               </article>
             </li>
           )

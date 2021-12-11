@@ -61,6 +61,15 @@
 :after,
 :before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#___gatsby,
+#gatsby-focus-wrapper,
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
 html {
@@ -76,14 +85,14 @@ body {
   color: var(--color-text);
 }
 
-footer {
-  padding: var(--spacing-6) var(--spacing-0);
-}
-
 hr {
   background: var(--color-accent);
   height: 1px;
   border: 0;
+}
+
+footer {
+  margin-top: 3rem;
 }
 
 /* Heading */
@@ -167,6 +176,7 @@ ol {
   margin-bottom: var(--spacing-8);
   list-style-position: outside;
   list-style-image: none;
+  list-style: none;
 }
 
 ul li,
@@ -233,22 +243,52 @@ a:focus {
 /* Custom classes */
 
 .global-wrapper {
-  margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
+  display: flex;
+  flex-direction: row;
   padding: var(--spacing-10) var(--spacing-5);
+  overflow-x: hidden;
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
-  margin-bottom: var(--spacing-20);
+  margin-bottom: 2rem;
 }
 
 .global-header {
+  position: fixed;
+  z-index: 2;
+  min-width: 20rem;
+  height: 100%;
   margin-bottom: var(--spacing-12);
+}
+
+.footer {
+  padding: var(--spacing-6) 0;
+  color: #777777;
+}
+
+.icon-box {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.icons {
+  display: inline-flex;
+  justify-content: center;
+  color: #5b5b5b;
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+.icon :hover {
+  opacity: 1;
+}
+
+.global-wrapper main {
+  padding-left: 22rem;
 }
 
 .main-heading {
   font-size: var(--fontSize-7);
-  margin: 0;
+  margin-bottom: 3rem;
 }
 
 .post-list-item {
@@ -272,19 +312,13 @@ a:focus {
 }
 
 .header-link-home {
-  font-weight: var(--fontWeight-bold);
-  font-family: var(--font-heading);
-  text-decoration: none;
-  font-size: var(--fontSize-2);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 3rem;
 }
 
 .bio {
   display: flex;
-  margin-bottom: var(--spacing-0);
-}
-
-.bio p {
-  margin-bottom: var(--spacing-0);
 }
 
 .bio-avatar {
@@ -305,6 +339,11 @@ a:focus {
 
 .blog-post-nav ul {
   margin: var(--spacing-0);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
 }
 
 .gatsby-highlight {
