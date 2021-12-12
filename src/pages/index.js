@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { Helmet } from "react-helmet"
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -20,6 +21,12 @@ const Index = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Helmet>
+        <meta
+          name="google-site-verification"
+          content="c4xYskFHQz0OFG-ogDXYSQWlNWLeJIpR8r1N-tRoOnA"
+        />
+      </Helmet>
       <Seo title="All posts" />
       <ol>
         {posts.map(post => {
