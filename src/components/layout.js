@@ -1,9 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Bio from "./bio"
-import { FiMail, FiGithub } from "react-icons/fi"
+import Sns from "./sns"
+import Categories from "./categories"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, children, data, onChangeCat }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
 
@@ -15,32 +16,8 @@ const Layout = ({ location, title, children }) => {
             <Link to="/">{title}</Link>
           </h1>
           <Bio />
-          <div className="icon-box">
-            <a
-              className="icons"
-              href="https://github.com/usgnusmig"
-              title="Github"
-            >
-              <FiGithub />
-            </a>
-            <a
-              className="icons"
-              href="mailto:usgnusmig@gmail.com"
-              title="usgnusmig@gmail.com"
-            >
-              <FiMail />
-            </a>
-            <a
-              className="icons"
-              href="https://www.buymeacoffee.com/usgnusmig"
-              title="Buy me a coffee"
-            >
-              <img
-                src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg"
-                alt="Buy me a coffee"
-              />
-            </a>
-          </div>
+          <Categories data={data} onChangeCat={onChangeCat} />
+          <Sns />
           <footer className="footer">
             © {new Date().getFullYear()}, All Rights Reserved.
           </footer>

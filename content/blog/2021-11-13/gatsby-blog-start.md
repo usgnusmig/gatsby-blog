@@ -2,7 +2,7 @@
 title: Gatsby Blog 시작
 date: "2021-11-13"
 description: 개발 블로그 시작
-categories: TIL
+categories: Blog
 ---
 
 ## 개발 블로그 만들기

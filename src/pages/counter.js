@@ -13,12 +13,12 @@ const Counter = () => {
   }
 
   return (
-    <>
+    <div className="about-wrap">
       <Link to="/about">뒤로가기</Link>
       <h3>Total Count: {counter} </h3>
       <button onClick={clickUpHandler}>Count Up</button>
       <button onClick={clickDownHandler}>Count Down</button>
-    </>
+    </div>
   )
 }
 

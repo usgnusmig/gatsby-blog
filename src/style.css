@@ -261,12 +261,24 @@ a:focus {
   margin-bottom: var(--spacing-12);
 }
 
+.category-box {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.categories {
+  padding: 0.2rem;
+  font-weight: 700;
+}
+
 .footer {
+  margin: 0;
   padding: var(--spacing-6) 0;
   color: #777777;
 }
 
 .icon-box {
+  margin-top: 2rem;
   display: inline-flex;
   gap: 0.5rem;
 }
@@ -278,7 +290,7 @@ a:focus {
   font-size: 1.4rem;
   opacity: 0.5;
 }
-.icon :hover {
+.icons :hover {
   opacity: 1;
 }
 
@@ -348,6 +360,13 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+}
+
+.about-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Media queries */

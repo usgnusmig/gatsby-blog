@@ -3,15 +3,20 @@ import { Link } from "gatsby"
 
 const About = () => {
   return (
-    <>
-      <h1>Hello Im Sungsu</h1>
-      <Link to="/">Go back</Link>
-      <h4>Study..</h4>
-      <Link to="/Counter">Counter</Link>
-      <br />
-      <Link to="/financialLedger">Financial Ledger</Link>
-      <br />
-    </>
+    <div className="about-wrap">
+      <h1>
+        <Link to="/">안녕하세요</Link>
+      </h1>
+      <ol>
+        작업 목록
+        <li>
+          <Link to="/counter">Counter</Link>
+        </li>
+        <li>
+          <Link to="/financialLedger">Financial Ledger</Link>
+        </li>
+      </ol>
+    </div>
   )
 }
 

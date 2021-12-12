@@ -1,8 +1,8 @@
 ---
-title: Typography로 폰트 변경하기
+title: Gatsby Blog Typography로 폰트 변경하기
 date: "2021-12-08"
 description: 폰트 바꾸기
-categories: blog
+categories: Blog
 ---
 
 > https://www.gatsbyjs.com/docs/using-typography-js/ 문서를 정리한 글 입니다.
