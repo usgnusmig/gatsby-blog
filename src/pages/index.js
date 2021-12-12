@@ -26,6 +26,10 @@ const Index = ({ data, location }) => {
           name="google-site-verification"
           content="c4xYskFHQz0OFG-ogDXYSQWlNWLeJIpR8r1N-tRoOnA"
         />
+        <meta
+          name="naver-site-verification"
+          content="1750e4b1320dea37fd637ef2b9c6f0b1d6ed9d81"
+        />
       </Helmet>
       <Seo title="All posts" />
       <ol>
