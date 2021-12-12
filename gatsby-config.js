@@ -17,6 +17,14 @@ module.exports = {
     `gatsby-plugin-image`,
     "gatsby-plugin-sitemap",
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://s-log.netlify.app/",
+        sitemap: "https://s-log.netlify.app/sitemap/sitemap-index.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
