@@ -315,33 +315,34 @@ _   underscore
   [링크 키워드](링크 주소)
 
 ```
-예 : [내 블로그](https://usgnus.netlify.app)
+예 : [내 블로그](https://s-log.netlify.app)
 ```
 
 > 🔍 **결과**
 
-예 : [내 블로그](https://usgnus.netlify.app)
+예 : [내 블로그](https://s-log.netlify.app)
 
 - 자동 링크
 
 ```
-예 : <https://usgnus.netlify.app>
+예 : <https://s-log.netlify.app>
 ```
 
 > 🔍 **결과**
 
-예 : <https://usgnus.netlify.app>
+예 : <https://s-log.netlify.app>
 
 ### 9. 이미지
 
-이미지 크기 조절은 뒤에 {: width='400' height='400'}
+이미지 크기 조절은 뒤에 width='600px' height='350px'
 
 ```
-![그림1](./golden.png)
-![그림2](./golden.png){: width="400" height="400"}
+<img src="golden.png" width="350" height="350px" title="golden"/>
 ```
 
 > 🔍 **결과**
+
+> <img src="golden.png" width="350" height="350px" title="golden"/>
 
 ### 10. 줄바꿈
 
