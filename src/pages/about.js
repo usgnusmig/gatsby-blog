@@ -15,6 +15,9 @@ const About = () => {
         <li>
           <Link to="/financialLedger">Financial Ledger</Link>
         </li>
+        <li>
+          <Link to="/userInput">User Input Form</Link>
+        </li>
       </ol>
     </div>
   )

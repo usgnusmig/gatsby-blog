@@ -46,8 +46,9 @@ const App = () => {
   }
   return (
     <div>
-      <Link to="/about">뒤로가기</Link>
-      <TitleStyle>가계부</TitleStyle>
+      <TitleStyle>
+        <Link to="/about">가계부</Link>
+      </TitleStyle>
       <AddExpense onAddExpense={addExpenseHandler} />
       <Expense items={expenses} />
     </div>
