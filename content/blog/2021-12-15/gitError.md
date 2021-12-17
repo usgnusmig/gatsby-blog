@@ -1,5 +1,5 @@
 ---
-title: Github error src refspec main does not match any
+title: Github error src refspec main does not match any Github push오류
 date: "2021-12-15"
 description: Github push 오류
 categories: Issue
