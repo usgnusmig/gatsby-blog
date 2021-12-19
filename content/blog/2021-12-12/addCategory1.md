@@ -23,7 +23,6 @@ categories: Blog
 
 ```js
 import React from "react"
-import { graphql } from "gatsby"
 
 const Categories = ({ data }) => {
   const { group } = data.allMarkdownRemark
@@ -45,39 +44,6 @@ const Categories = ({ data }) => {
   )
 }
 export default Categories
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-          categories
-        }
-      }
-      group(field: frontmatter___categories) {
-        edges {
-          node {
-            id
-          }
-        }
-        fieldValue
-        totalCount
-      }
-    }
-  }
-`
 ```
 
 layout으로부터 { data } 를 받아와 이렇게 세팅을 해주고 layout파일에 추가해줬다
