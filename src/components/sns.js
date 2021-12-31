@@ -26,10 +26,10 @@ const Sns = () => {
         title="Buy me a coffee"
         target="_blank"
       >
-        <img
+        {/* <img
           src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg"
           alt="Buy me a coffee"
-        />
+        /> */}
       </a>
     </div>
   )
