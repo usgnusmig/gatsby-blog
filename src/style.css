@@ -269,6 +269,10 @@ a:focus {
   overflow-x: scroll;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .category-box li {
   background-color: #fff;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
