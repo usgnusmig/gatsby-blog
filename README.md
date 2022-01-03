@@ -1,3 +1,3 @@
-# 안녕하세요 김성수 입니다
+# [S-Log](https://s-log.netlify.app/) With [Gatsby](https://www.gatsbyjs.com/)/[gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog/)
 
-# 반가워요
+<img src="./src/assets/main.png" width="auto" height="auto" title="main"/>
