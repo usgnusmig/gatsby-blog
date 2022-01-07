@@ -28,3 +28,9 @@ categories: Issue
 ![good](./good.png)
 
 이제 정상적으로 작동한다.
+
+## Reference
+
+> [JINSUNG LEE 님 블로그](https://velog.io/@milkyway/React-%EC%98%A4%EB%A5%98-%ED%95%B4%EA%B2%B0-You-are-running-create-react-app-4.0.2-which-is-behind-the-latest-release-4.0.3)
+>
+> [FacebookGithub](https://github.com/facebook/create-react-app/issues/10251)
