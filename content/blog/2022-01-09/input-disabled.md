@@ -16,7 +16,7 @@ categories: React
 import React, { useState } from "react"
 
 const Input = () => {
-  const [flip, setFlip] = useState(true)
+  const [flip, setFlip] = useState(false)
 
   const flipHandler = () => {
     setFlip(current => !current)
@@ -27,12 +27,7 @@ const Input = () => {
       <h1>Input Boxs</h1>
       <div>
         <label>Email</label>
-        <input
-          type="string"
-          id="email"
-          placeholder="email"
-          disabled={flip === false}
-        />
+        <input type="string" id="email" placeholder="email" disabled={flip} />
       </div>
       <div></div>
 
@@ -41,9 +36,9 @@ const Input = () => {
         type="password"
         id="password"
         placeholder="password"
-        disabled={flip === true}
+        disabled={!flip}
       />
-
+      <br />
       <button onClick={flipHandler}>Change disabled</button>
     </div>
   )
