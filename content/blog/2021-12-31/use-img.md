@@ -2,7 +2,7 @@
 title: Markdown Image 마크다운 이미지 사용하기
 date: "2021-12-31"
 description: Markdown 사용기
-categories: Markdown
+categories: etc
 ---
 
 # Markdown에서 Image 사용하기

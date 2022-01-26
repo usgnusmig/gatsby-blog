@@ -2,7 +2,7 @@
 title: Use Markdown
 description: 마크다운 기본 사용법
 date: "2021-11-14"
-categories: Markdown
+categories: etc
 ---
 
 # Markdown
